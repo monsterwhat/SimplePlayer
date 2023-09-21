@@ -1,0 +1,45 @@
+/* CSS to position the "Skip Intro" button */
+#videoContainer {
+    position: relative;
+}
+
+/* Style the Skip Intro button */
+.skip-intro {
+    position: absolute;
+    top: 30px; /* Adjust the top positioning as needed */
+    right: 30px; /* Adjust the right positioning as needed */
+    z-index: 1; /* Ensure it appears on top of the video */
+    opacity: 0.7; /* Adjust opacity as desired when not hovered */
+    transition: opacity 0.3s ease-in-out; /* Smooth opacity transition */
+}
+
+/* Make the Skip Intro button fully visible on hover or click */
+.skip-intro:hover,
+.skip-intro:active {
+    opacity: 1;
+}
+
+/* Add this CSS for the next and previous buttons */
+.video-controls {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 60px; /* Adjust the width as needed */
+}
+
+#prevButton, #nextButton {
+    font-size: 24px; /* Adjust the font size as needed */
+    width: 100px;
+    height: 100px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+#prevButton:focus, #nextButton:focus {
+    outline: none; /* Remove focus outline if needed */
+}
+

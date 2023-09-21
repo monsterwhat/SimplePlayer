@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <section class="section">
+        <div class="container box">
+            <h1 class="title">Video Player</h1>
+            
+            <!-- Subtitle for currently playing video name -->
+            <h2 class="subtitle" id="currentVideoName"></h2>
+            
+            <!-- Columns for video player and video list -->
+            <div class="columns">
+                <!-- Video Player Column -->
+                <div class="column">
+                    <div class="box " id="videoContainer">
+                        <video id="videoPlayer" controls class="video" >
+                            Your browser does not support the video tag.
+                        </video>
+                        <!-- Skip Intro Button (initially hidden) -->
+                        <button class="button is-primary skip-intro" id="skipIntroButton" style="display: none;">Skip Intro</button>
+						
+						<!-- Next and Previous Buttons -->
+						<div class="video-controls">
+							<button id="prevButton" class="button is-info is-outlined"><</button>
+							<button id="nextButton" class="button is-info is-outlined">></button>
+						</div>
+						
+					</div>
+                </div>
+                
+                <!-- Video List Column -->
+                <div class="column">
+                    <div class="box">
+                        <label class="label">Video List</label>
+
+                        <div class="content">
+                            <ul id="videoList">
+                                <!-- Video links will be added here dynamically -->
+                            </ul>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <!-- Update input to accept multiple files -->
+                                <input type="file" id="videoInput" accept="video/*" multiple>
+                            </div>
+                        </div>
+
+                        <!-- Skip Intro Time Input Field -->
+                        <div class="field">
+                            <label class="label">Skip Intro Time (seconds)</label>
+                            <div class="control">
+                                <input type="number" id="skipTimeInput" class="input" value="30">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
